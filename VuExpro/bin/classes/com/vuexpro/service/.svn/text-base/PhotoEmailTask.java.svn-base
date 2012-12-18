@@ -1,0 +1,92 @@
+package com.vuexpro.service;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Environment;
+import android.util.Log;
+import android.view.View;
+
+import com.vuexpro.model.Channel;
+
+//AnsyncTask
+public	class PhotoEmailTask  extends AsyncTask<Integer, Void, Integer> {
+
+		private static final String TAG = "nevin";
+		ArrayList<Channel> mChannels;
+		boolean isSendEmail; 
+		Activity mActivity;
+
+		public PhotoEmailTask(ArrayList<Channel> channels ,boolean isSendEmail ,Activity acttivity){
+			this.isSendEmail = isSendEmail;
+			this.mChannels = channels;
+			this.mActivity = acttivity;
+		}
+		private void emailFiles(String path , ArrayList<String> fileNames) {
+
+			Intent sendIntent = new Intent(Intent.ACTION_SEND);
+			sendIntent.setType("application/zip");
+			for (String fileName : fileNames){
+
+				sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse(path+"/"+fileName));
+			}
+			sendIntent.putExtra(Intent.EXTRA_SUBJECT, "VuExpro Snapshot Notification");
+			sendIntent.putExtra(Intent.EXTRA_TEXT, "Please refer to attachment for details.");
+			sendIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"".trim()});
+			this.mActivity.startActivity(Intent.createChooser(sendIntent, "Select Destination"));
+
+		}
+		@Override
+		protected Integer doInBackground(Integer... params) {
+			try {
+				if(this.mChannels==null||this.mChannels.size()==0){
+					Log.e(TAG," imageview not ready");
+					return 0;
+				}
+
+				String path = Environment.getExternalStorageDirectory().toString()+"/DCIM/VuExpro";
+				File filePath=new File(path);
+				if (!filePath.exists()){
+					filePath.mkdir();
+				} 
+				ArrayList<String> fileNames = new ArrayList<String>();
+				for (Channel ch: this.mChannels){
+					if (ch.snapshot()!=null){
+						java.util.Date date= new java.util.Date();
+						String fileName = new Timestamp(date.getTime()).toString();
+						fileName=fileName.replace(":", "").replace("-", "").replace(" ", "").replace(".", "")+".jpg";
+						fileNames.add(fileName);
+						File file=new File(path,fileName);
+						if (file.exists()){
+							return 0;
+						}
+						FileOutputStream out = new FileOutputStream(file);
+						ch.snapshot().compress(android.graphics.Bitmap.CompressFormat.JPEG, 100, out);
+						out.flush();
+						out.close();
+						if(isSendEmail){
+							this.emailFiles(path,fileNames);
+							isSendEmail=false;
+						}
+					}
+				}
+
+			} catch (Exception e) {
+				Log.e(TAG,"CameraOnClickListener:"+e.toString());
+				e.printStackTrace();
+			} 
+			return null;
+		}
+
+
+	}
+
+	

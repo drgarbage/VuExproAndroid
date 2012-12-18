@@ -1,0 +1,365 @@
+package com.vuexpro.control;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.vuexpro.model.Channel;
+import com.vuexpro.model.Core;
+import com.vuexpro.model.Device;
+import com.vuexpro.view.ChannelView;
+
+import android.util.AttributeSet;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView.ScaleType;
+import android.widget.LinearLayout;
+import android.content.Context;
+import android.content.Intent;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
+
+
+public class UIDeviceView extends ViewPager{
+	private static final String TAG = "nevin";
+	private Device _device;
+	private int _rowCount = 1;
+	private int _columnCount = 1;
+	private ScaleType _scaleType = ScaleType.MATRIX;		// Nevin mode from FIT_CENTER to MATRIX
+	private boolean pagerEnabled = true;
+	private UIDeviceViewActivity mActivity;
+
+	public UIDeviceView(Context context) {
+		super(context);
+	}
+	public UIDeviceView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+	}
+
+
+	//
+	// public properties
+	//
+	public void setDeviceViewContainer(UIDeviceViewActivity activity){
+		mActivity = activity;
+	}
+	// property Device
+	public Device getDevice(){
+		return _device;
+	}
+	public void setDevice(Device value){
+		_device = value;
+		this.updateLayout();
+	}
+
+	// property LayoutConfig
+	public int getRowCount(){return _rowCount;}
+	public void setRowCount(int value){_rowCount = value;}
+	public int getColumnCount(){return _columnCount;}
+	public void setColumnCount(int value){_columnCount = value;}
+	public ScaleType getScaleType(){
+		return _scaleType;
+	}
+	public void setScaleType(ScaleType value){
+		_scaleType = value;
+		DevicePageAdapter adapter = (DevicePageAdapter) this.getAdapter();
+		if(adapter==null) return;
+		adapter.changeScaleType(value);
+	}
+	public void setChannelPadding(int i, int j, int k, int l) {
+		DevicePageAdapter adapter = (DevicePageAdapter) this.getAdapter();
+		if(adapter==null) return;
+		adapter.setChannelPadding(i, j, k, l);
+
+	}
+	public boolean getPagingEnabled() {
+		return this.pagerEnabled;
+	}
+	public void setPagingEnabled(boolean e) {
+		this.pagerEnabled = e;
+	}
+
+	// property PageItemCount
+	public int getPageItemCount() {
+		return _rowCount * _columnCount;
+	}
+	public boolean getForzen(){return false;}
+	public void setForzen(boolean value){}
+
+
+	private class DevicePageAdapter extends PagerAdapter {
+		public List<ChannelPageLayout> pages = new ArrayList<ChannelPageLayout>();
+
+		@Override
+		public Object instantiateItem (ViewGroup container, int position){
+			View view = pages.get(position);
+			container.addView(view);
+			return view;
+		}
+
+		@Override
+		public void destroyItem (View container, int position, Object object){
+			((ViewPager) container).removeView((View)object);
+		}
+
+		@Override
+		public int getCount() {
+			return pages.size();
+		}
+
+		@Override
+		public boolean isViewFromObject(View view, Object object) {
+			return view == object;
+		}
+
+		public void changeScaleType(ScaleType type) {
+			for(ChannelPageLayout layout : pages) {
+				layout.changeScaleType(type);
+			}
+		}
+		public void setChannelPadding(int i, int j, int k, int l) {
+			for(ChannelPageLayout layout : pages) {
+				layout.setChannelPadding(i, j, k, l);
+			}
+
+		}
+	}
+
+	private class ChannelPageLayout extends LinearLayout implements OnClickListener{
+		private int _rowCount = 1;
+		private int _columnCount = 1;
+		private ArrayList<Channel> _relatedChannels = new ArrayList<Channel>();
+
+		public ChannelPageLayout(Context context) {
+			super(context);
+			//			this.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
+		}
+		public void notifyDataChanged(){
+
+			int pageItemCount = _rowCount * _columnCount;
+			int totalViewCount = this.getChildCount();
+
+			if(pageItemCount > totalViewCount) {
+				for(int i = totalViewCount; i < pageItemCount; i++) {
+					ChannelView cview = new ChannelView(this.getContext());
+					this.addView(cview);
+				}
+			} else if (pageItemCount < totalViewCount) {
+				for(int i = totalViewCount; i > totalViewCount; i--) {
+					this.removeViewAt(0);
+				}
+			}
+
+			int channelIndex = 0;
+			int channelCount = _relatedChannels.size();
+			for(int i = 0 ; i < pageItemCount && channelIndex < channelCount ; i ++) {
+				ChannelView cview = (ChannelView)this.getChildAt(i);
+				Channel channel = _relatedChannels.get(channelIndex);
+				cview.setChannel(channel);
+				cview.setOnClickListener(this);
+				channelIndex++;
+			}
+		}
+		public void changeScaleType(ScaleType type){
+			int totalViewCount = this.getChildCount();
+			for(int i = 0 ; i < totalViewCount; i++) {
+				ChannelView cview = (ChannelView)this.getChildAt(i);
+				cview.setScaleType(type);
+			}
+		}
+		public void setChannelPadding(int i, int j, int k, int l) { 
+			int totalViewCount = this.getChildCount();
+			for(int x = 0 ; x < totalViewCount; x++) {
+				ChannelView cview = (ChannelView)this.getChildAt(x);
+				cview.setPadding(i, j, k, l);
+			}
+		}
+		@Override
+		protected void onLayout(boolean changed, int l, int t, int r, int b) {
+			if(!changed) return;
+
+			int totalViewCount = this.getChildCount();
+
+			double width = r-l;
+			double height = b-t;
+			double frameWidth = width / _columnCount;
+			double frameHeight = height / _rowCount;
+
+			int viewIndex = 0;
+			double left, top, right, bottom;
+			for(int row = 0; row < _rowCount; row++){
+				top = row * frameHeight;
+				bottom = top + frameHeight;
+				for (int col = 0; col < _columnCount; col++) {
+					if(viewIndex >= totalViewCount) break;
+					View view = this.getChildAt(viewIndex);
+					left = col * frameWidth;
+					right = left + frameWidth;
+
+					view.layout((int)left, (int)top, (int)right, (int)bottom);
+					viewIndex++;
+				}
+			}
+			for(;viewIndex < totalViewCount;viewIndex++) {
+				this.removeViewAt(viewIndex);
+			}
+		}
+
+		@Override
+		public void onClick(View view) {
+
+			if (_rowCount==1 && _columnCount==1){
+				// Note: Here was to do Digital zoom if enable, but since the onTouch event will infer onClick event,
+				//			, this block will not be use.
+
+			}else{
+				// Which Channel has been clicked
+				ChannelView cview = (ChannelView)view;
+				Channel channel = cview.getChannel();
+				// Send the channel key to ChannelView Activity
+				int channelIndex = _device.getChannels().indexOf(channel);
+				UIDeviceView.this._columnCount = 1;
+				UIDeviceView.this._rowCount = 1;
+				UIDeviceView.this.setDevice(_device);
+				UIDeviceView.this.setCurrentItem(channelIndex);
+				if (mActivity==null) return; 
+				mActivity.updateLayout();
+				mActivity.invalidateOptionsMenu(); 
+				//				Intent intent = new Intent();
+				//				intent.setClass(this.getContext(), UIDeviceViewActivity.class);
+				//				intent.putExtra(UIDeviceViewActivity.PARAM_INT_PROFILE_ID,profileIndex);
+				//				intent.putExtra(UIDeviceViewActivity.PARAM_INT_SELECTED_CHANNEL_INDEX,channelIndex);
+				//				intent.putExtra(UIDeviceViewActivity.PARAM_INT_ROW_COUNT, 1);
+				//				intent.putExtra(UIDeviceViewActivity.PARAM_INT_COLUMN_COUNT, 1);
+				//				this.getContext().startActivity(intent);
+			}
+
+		}
+		public ArrayList<Channel> getRelatedChannels(){
+			return this._relatedChannels;
+		}
+	}
+
+	//
+	// private methods
+	//
+	private void updateLayout(){
+		// nevin --- start ---
+		// clear current user interface
+		if(_device == null) return;
+		if(this.getAdapter()!=null){
+			DevicePageAdapter adapter = (DevicePageAdapter)this.getAdapter();
+			for (int i =0 ; i<adapter.pages.size();i++){
+				ChannelPageLayout pageView = adapter.pages.get(i);
+				for(int j =0;j<pageView.getChildCount();j++){
+					ChannelView ch = (ChannelView)(pageView.getChildAt(j));
+					ch.setForzen(true);
+				}
+			}
+		}
+		// Only Aviable to check when DeviceViewActivity is set to DeviceView's Activity.
+		if (!isTabPortrait()){
+			int tmp = _rowCount;
+			_rowCount = _columnCount;
+			_columnCount = tmp;
+		}
+		// nevin ---- end ---
+		// create pages
+		DevicePageAdapter adapter =  new DevicePageAdapter();
+		int channelIndex = 0;
+		int channelCount = _device.getChannels().size();
+		int pageItemCount = _rowCount * _columnCount;
+		int pageCount = (int)Math.ceil((double)channelCount / (double)pageItemCount);
+
+
+		// create pages
+		for (int p = 0; p < pageCount; p++)
+		{
+			ChannelPageLayout pageView = 
+					new ChannelPageLayout(this.getContext());
+			pageView.setPadding(5, 5, 5, 5);
+			pageView._rowCount = _rowCount;
+			pageView._columnCount = _columnCount;
+			// Add Channel to newly created page
+			for (int f = 0; f < pageItemCount && channelIndex < channelCount ; f++)
+			{
+				Channel ch = _device.getChannel(channelIndex);
+				pageView._relatedChannels.add(ch);
+				channelIndex++;
+			}
+			pageView.notifyDataChanged();
+			adapter.pages.add(pageView);
+
+		}
+		
+		if(this._columnCount==1 && this._rowCount==1)
+			adapter.changeScaleType(_scaleType);
+		else
+			adapter.changeScaleType(ScaleType.FIT_CENTER);
+		this.setAdapter(adapter);
+		this.setCurrentItem(0);
+		
+		if (this.mActivity!=null){
+			if (this._rowCount!=1 && this._columnCount!=1)
+				this.setChannelPadding(5, 5, 5, 5);
+		}
+
+	}
+	public boolean isTabPortrait(){
+		DisplayMetrics displaymetrics = new DisplayMetrics();
+		if (this.mActivity == null) return false;
+		this.mActivity.getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+		int height = displaymetrics.heightPixels;
+		int width = displaymetrics.widthPixels;
+		return (width<height);
+		}
+
+	// 
+	// public methods
+	// 
+	public ArrayList<Channel> getCurrentChannels(){
+		List<ChannelPageLayout> cpls = ((DevicePageAdapter)this.getAdapter()).pages;
+		if (cpls==null || cpls.size()==0) return null;
+		ChannelPageLayout cpl = cpls.get(this.getCurrentItem());
+		return cpl.getRelatedChannels();
+	}
+	public void updateFrozenStatus(){
+		int pageSize = ((DevicePageAdapter)this.getAdapter()).pages.size();
+		if (pageSize==0) return;	// only one page, nothing need to be forzen
+		int cvSize = ((DevicePageAdapter)this.getAdapter()).pages.get(this.getCurrentItem()).getChildCount();
+		for (int pageIndex=0;pageIndex<pageSize ; pageIndex ++){
+			for (int cvIndex = 0 ; cvIndex < cvSize ; cvIndex++){
+				ChannelView c=   (ChannelView) ((DevicePageAdapter)this.getAdapter()).pages.get(pageIndex).getChildAt(cvIndex);
+				if (pageIndex==this.getCurrentItem()){
+					c.setForzen(false);
+				}else{
+					c.setForzen(true);
+				}
+
+			}
+		}
+	}
+
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		if (this.pagerEnabled) {
+			return super.onTouchEvent(event);
+		}
+
+		return false;
+	}
+
+	@Override
+	public boolean onInterceptTouchEvent(MotionEvent event) {
+		if (this.pagerEnabled) {
+			return super.onInterceptTouchEvent(event);
+		}
+		return false;
+	}
+
+
+
+
+}

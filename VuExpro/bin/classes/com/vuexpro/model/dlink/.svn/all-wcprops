@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/src/com/vuexpro/model/dlink
+END
+DLinkIPCameraDevice.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/src/com/vuexpro/model/dlink/DLinkIPCameraDevice.java
+END
+DLinkIPCameraChannel.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/src/com/vuexpro/model/dlink/DLinkIPCameraChannel.java
+END
+DLinkIPCameraMJPEGChannel.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/src/com/vuexpro/model/dlink/DLinkIPCameraMJPEGChannel.java
+END
+DLinkIPCameraH264Channel.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/src/com/vuexpro/model/dlink/DLinkIPCameraH264Channel.java
+END

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vuexpro.control.UIDeviceListItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_device_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/channellistitembackground"
+    android:minHeight="120dp"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <com.vuexpro.control.UIDeviceView
+        android:id="@+id/dv_snap"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/video_background" 
+        />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/bt_edit"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/bt_delete"
+            android:background="@null"
+            android:text="@null" />
+
+        <Button
+            android:id="@+id/bt_delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/delete_bt"
+            android:text="@string/del"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/bt_view"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:soundEffectsEnabled="true"
+            android:text="@null" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/name"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_name"
+            android:layout_below="@+id/tv_name"
+            android:text="@string/location"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_type"
+            android:layout_below="@+id/tv_type"
+            android:text="@string/location"
+            android:textColor="#C0C0C0"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="35dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="15dp " >
+
+        <ImageView
+            android:id="@+id/ib_camera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:alpha="100"
+            android:contentDescription="@string/camera"
+            android:src="@drawable/camera" />
+
+        <ImageButton
+            android:id="@+id/ib_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/change_order_up"
+            android:src="@android:drawable/arrow_up_float" />
+
+        <ImageButton
+            android:id="@+id/ib_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/change_order_down"
+            android:src="@android:drawable/arrow_down_float" />
+    </RelativeLayout>
+
+</com.vuexpro.control.UIDeviceListItemView>

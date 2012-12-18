@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavdevice
+END
+avdevice.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavdevice/avdevice.h
+END
+sndio_common.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavdevice/sndio_common.h
+END
+dv1394.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavdevice/dv1394.h
+END
+dshow.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavdevice/dshow.h
+END
+alsa-audio.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavdevice/alsa-audio.h
+END

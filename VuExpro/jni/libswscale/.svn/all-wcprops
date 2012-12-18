@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libswscale
+END
+swscale.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libswscale/swscale.h
+END
+swscale_internal.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libswscale/swscale_internal.h
+END
+rgb2rgb.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libswscale/rgb2rgb.h
+END

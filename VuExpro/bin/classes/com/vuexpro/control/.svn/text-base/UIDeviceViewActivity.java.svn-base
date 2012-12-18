@@ -1,0 +1,546 @@
+package com.vuexpro.control;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+
+import com.vuexpro.R;
+import com.vuexpro.model.Channel;
+import com.vuexpro.model.Core;
+import com.vuexpro.model.Profile;
+import com.vuexpro.service.PhotoEmailTask;
+
+import android.app.ActionBar;
+import android.app.Activity;
+import android.app.Service;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.database.DataSetObserver;
+import android.os.Bundle;
+import android.os.Vibrator;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
+public class UIDeviceViewActivity extends Activity  implements  OnClickListener , OnPageChangeListener, ListAdapter ,UIDeviceListItemView.DeviceListItemCallBack {
+	public static final String PARAM_INT_PROFILE_ID = "PARAM_INT_PROFILE_ID";
+	public static final String PARAM_INT_SELECTED_CHANNEL_INDEX = "PARAM_INT_SELECTED_CHANNEL_INDEX";
+	public static final String PARAM_INT_ROW_COUNT = "PARAM_INT_ROW_COUNT";
+	public static final String PARAM_INT_COLUMN_COUNT = "PARAM_INT_COLUMN_COUNT";
+	public static final String PARAM_INT_SELECTED_PAGE_INDEX = "PARAM_INT_SELECTED_PAGE_INDEX";
+	private static final String TAG = "nevin2";
+
+	Button btUp 		;
+	Button btDown 		;
+	Button btLeft 		;
+	Button btLeftDown 	;
+	Button btLeftUp 	;
+	Button btRight		;
+	Button btRightUp	;
+	Button btRightDown 	;
+	Button btMiddle 	;
+	Button btZoomUp 	;
+	Button btZoomDown 	;
+	ImageView ivMaskDirect;
+	ImageView ivMaskZoom;
+
+	// Passed Variable
+	int profileIndex = 0;
+	int rowCount = 3;
+	int columnCount = 2;
+	int selectedPageIndex = -1;
+	int selectedChannelIndex = -1;
+
+	protected UIDeviceView _deviceView;
+
+	/// Properties : Device List
+	private ListView listview;
+	private LayoutInflater mInflater;
+	private Core _system;
+
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		
+		// General Menu Bar Setup  
+		ActionBar actionBar = this.getActionBar();
+		actionBar.setHomeButtonEnabled(true);
+		actionBar.setDisplayShowTitleEnabled(false);
+		actionBar.setDisplayShowHomeEnabled(true);
+		// Specify which menu item will be used 
+		MenuInflater inflater = getMenuInflater();
+		if ( _deviceView.getRowCount()==1 && _deviceView.getColumnCount()==1){
+			actionBar.setIcon(R.drawable.ic_menu_back);
+			inflater.inflate(R.menu.menu_channel, menu);
+		}else{
+			actionBar.setIcon(R.drawable.ic_menu_moreoverflow);
+			inflater.inflate(R.menu.menu_device_view_tablet, menu);
+		}
+
+		return true;
+	}
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		Intent intent ;
+		switch (item.getItemId()) {
+		// Device List Start
+		case R.id.menu_add:
+			intent = new Intent(this, UIConfigurateDeviceActivity.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(intent);
+			return true;
+		case R.id.menu_list:
+			
+			if (_currentListMode == ITEM_VIEW_TYPE_EDIT){
+				item.setIcon(android.R.drawable.ic_menu_edit);
+				_currentListMode = ITEM_VIEW_TYPE_DEFAULT;
+				this.notifyDataSetChanged();
+			}else{
+				item.setIcon(R.drawable.edit_query);
+				_currentListMode = ITEM_VIEW_TYPE_EDIT;
+				this.notifyDataSetChanged();
+			}
+			return true;
+		// Device List End
+		case R.id.menu_camera:
+			this.takePicture();
+			return true;
+		case R.id.menu_email:
+			this.sendEmail();
+			return true;
+		case R.id.menu_more:
+			// this will only be call when one channel in deviceView 
+			Channel now = this._deviceView.getCurrentChannels().get(0);
+			intent = new Intent(this, UIChannelPTZActivity.class);
+			// send channel index via dummydevice
+			int profileID = Core.getCoreInstance().getProfiles().indexOf(now.getDevice().getProfile());
+			int channelID = now.getDevice().getChannels().indexOf(now);
+			intent.putExtra(PARAM_INT_PROFILE_ID,profileID );
+			intent.putExtra(PARAM_INT_SELECTED_CHANNEL_INDEX, channelID);
+			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(intent);
+			return true;
+		case R.id.menu_dzoom:
+			this._deviceView.setPagingEnabled(!this._deviceView.getPagingEnabled());
+			if(this._deviceView.getPagingEnabled())
+				Toast.makeText(this, "Swipe is un loced!", Toast.LENGTH_SHORT).show();
+			else
+				Toast.makeText(this, "Swipe is  locked!",Toast.LENGTH_SHORT).show();
+			return true;
+		case android.R.id.home:
+			
+			Log.d(TAG,"Home Pressed _deviceView.getRowCount:"+_deviceView.getRowCount());
+			Log.d(TAG,"Home Pressed is3x2:"   +this.isTabPortrait());
+			
+			if ( _deviceView.getRowCount()==1 && _deviceView.getColumnCount()==1){
+				
+				if (this.isTabPortrait()){
+					this._deviceView.setRowCount(rowCount);
+					this._deviceView.setColumnCount(columnCount);
+				}else{
+					this._deviceView.setRowCount(columnCount);
+					this._deviceView.setColumnCount(rowCount);
+				}
+				this._deviceView.setDevice(this._deviceView.getDevice());
+				this._deviceView.setChannelPadding(10, 10, 10, 10);
+				invalidateOptionsMenu();
+			}else{
+				if (listview.getVisibility()==View.VISIBLE)
+					listview.setVisibility(View.GONE);
+				else
+					listview.setVisibility(View.VISIBLE);
+					invalidateOptionsMenu();
+			}
+			this.updateLayout();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
+	@Override
+	public boolean onPrepareOptionsMenu(Menu menu) {
+	    super.onPrepareOptionsMenu(menu);
+	    MenuItem mi = menu.findItem(R.id.menu_list);
+	    if (listview==null) return true;	// when rotate device, onPrepareOptionsMenu will be called before onResume is called. So listview will be null 
+	    if (mi==null) return true;			// in single channel display, there's no such menu item
+	    if (listview.getVisibility()==View.VISIBLE)
+	    	menu.findItem(R.id.menu_list).setVisible(true);
+	    else
+	    	menu.findItem(R.id.menu_list).setVisible(false);
+	    return true;
+	}
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.device_view);
+		Intent currentIntent = this.getIntent();
+
+		profileIndex = currentIntent.getIntExtra(PARAM_INT_PROFILE_ID, profileIndex);
+		rowCount = currentIntent.getIntExtra(PARAM_INT_ROW_COUNT, rowCount);
+		columnCount = currentIntent.getIntExtra(PARAM_INT_COLUMN_COUNT, columnCount);
+		selectedPageIndex = currentIntent.getIntExtra(PARAM_INT_SELECTED_PAGE_INDEX, selectedPageIndex);
+		selectedChannelIndex = currentIntent.getIntExtra(PARAM_INT_SELECTED_CHANNEL_INDEX, selectedChannelIndex);
+
+		Profile profile = Core.getCoreInstance().getProfile(profileIndex);
+
+		_deviceView = (UIDeviceView) this.findViewById(R.id.dv_snap);
+		_deviceView.setDeviceViewContainer(this);
+		
+		if (this.isTabPortrait()){
+			this._deviceView.setRowCount(rowCount);
+			this._deviceView.setColumnCount(columnCount);
+		}else{
+			this._deviceView.setRowCount(columnCount);
+			this._deviceView.setColumnCount(rowCount);
+		}
+		_deviceView.setDevice(profile.getDevice());
+		if (_deviceView.isSingleChannel())
+			this._deviceView.setChannelPadding(10,10,0,0);
+		else
+			this._deviceView.setChannelPadding(5,5,5,5);
+		_deviceView.setCurrentItem(selectedChannelIndex);
+		_deviceView.setOnPageChangeListener(this);
+		
+
+		//		_deviceView.setOnTouchListener(this);
+		// NOTICE: If channel index was specified, then ignore PARAM_INT_SELECTED_PAGE_INDEX
+		// TODO: navigate to show selected page if selected page index > 0
+		// TODO: navigate to show selected channel if selected channel index > 0
+		initialView();
+		this.updateLayout();
+	}
+	@Override
+	public void onResume() {
+		super.onResume();
+		
+		///// Initial Device List
+		_system = Core.getCoreInstance();
+		listview = (ListView)this.findViewById(R.id.device_list);
+		listview.setAdapter(this);
+		mInflater = LayoutInflater.from(listview.getContext());
+		this.notifyDataSetChanged();
+		if (_deviceView.getRowCount()==1 && _deviceView.getColumnCount()==1){
+			listview.setVisibility(View.GONE);
+		}
+	}
+
+	private void initialView() {
+		btUp 		= (Button)this.findViewById(R.id.channel_up);			btUp.setOnClickListener(this);
+		btDown 		= (Button)this.findViewById(R.id.channel_down);			btDown.setOnClickListener(this);
+		btLeft 		= (Button)this.findViewById(R.id.channel_left);			btLeft.setOnClickListener(this);
+		btLeftDown 	= (Button)this.findViewById(R.id.channel_leftdown);		btLeftDown.setOnClickListener(this);
+		btLeftUp 	= (Button)this.findViewById(R.id.channel_leftup);		btLeftUp.setOnClickListener(this);
+		btRight		= (Button)this.findViewById(R.id.channel_right);		btRight.setOnClickListener(this);
+		btRightUp	= (Button)this.findViewById(R.id.channel_rightup);		btRightUp.setOnClickListener(this);
+		btRightDown = (Button)this.findViewById(R.id.channel_rightdown);	btRightDown.setOnClickListener(this);
+		btMiddle 	= (Button)this.findViewById(R.id.channel_middle);		btMiddle.setOnClickListener(this);
+		btZoomUp 	= (Button)this.findViewById(R.id.channel_zoom_up);		btZoomUp.setOnClickListener(this);
+		btZoomDown 	= (Button)this.findViewById(R.id.channel_zoom_down);	btZoomDown.setOnClickListener(this);
+		ivMaskDirect 	= (ImageView)this.findViewById(R.id.mask_direct);
+		ivMaskZoom  	= (ImageView)this.findViewById(R.id.mask_zoom);
+
+	}
+	// Action to current display channels. Check if PT or Z is enabled
+	public void updateLayout() { 
+		// Only show PTZ button when only one channel on screen
+		
+		if (_deviceView.getRowCount()==1 && _deviceView.getColumnCount()==1){
+			ArrayList<Channel> CurrentChannels = _deviceView.getCurrentChannels();
+			if (CurrentChannels==null) return;
+			Channel nowChannel  = CurrentChannels.get(0);
+			// check if Capable for PT
+			if (nowChannel.capableOf("pt")){
+				btUp.setVisibility(View.VISIBLE);
+				btDown.setVisibility(View.VISIBLE);
+				btLeft.setVisibility(View.VISIBLE);
+				btLeftDown.setVisibility(View.VISIBLE);
+				btLeftUp.setVisibility(View.VISIBLE);
+				btRight.setVisibility(View.VISIBLE);
+				btRightUp.setVisibility(View.VISIBLE);
+				btRightDown.setVisibility(View.VISIBLE);
+				btMiddle.setVisibility(View.VISIBLE);
+				ivMaskDirect.setVisibility(View.VISIBLE);
+				// check if Capable for Zoom
+				if (nowChannel.capableOf("zoom")){
+					btZoomUp.setVisibility(View.VISIBLE);
+					btZoomDown.setVisibility(View.VISIBLE);
+					ivMaskZoom.setVisibility(View.VISIBLE);
+				}
+			}else{
+				btUp.setVisibility(View.INVISIBLE);
+				btDown.setVisibility(View.INVISIBLE);
+				btLeft.setVisibility(View.INVISIBLE);
+				btLeftDown.setVisibility(View.INVISIBLE);
+				btLeftUp.setVisibility(View.INVISIBLE);
+				btRight.setVisibility(View.INVISIBLE);
+				btRightUp.setVisibility(View.INVISIBLE);
+				btRightDown.setVisibility(View.INVISIBLE);
+				btMiddle.setVisibility(View.INVISIBLE);
+				btZoomUp.setVisibility(View.INVISIBLE);
+				btZoomDown.setVisibility(View.INVISIBLE);
+				ivMaskDirect.setVisibility(View.INVISIBLE);
+				ivMaskZoom.setVisibility(View.INVISIBLE);
+			}
+		}
+
+
+	}
+	public boolean isTabPortrait(){
+		DisplayMetrics displaymetrics = new DisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+		int height = displaymetrics.heightPixels;
+		int width = displaymetrics.widthPixels;
+		return (width<height);
+		}
+	// Photo / Email Task
+	public void takePicture(){
+		new PhotoEmailTask(this._deviceView.getCurrentChannels(),false,this).execute();
+		Vibrator myVibrator = (Vibrator) getApplication().getSystemService(Service.VIBRATOR_SERVICE);
+		myVibrator.vibrate(500);
+	}
+	public void sendEmail(){
+		Vibrator myVibrator = (Vibrator) getApplication().getSystemService(Service.VIBRATOR_SERVICE);
+		myVibrator.vibrate(500);
+		new PhotoEmailTask(this._deviceView.getCurrentChannels(),true,this).execute();
+	}
+	// Control PTZ
+	@Override
+	public void onClick(View v) {
+		// This only valid when only 1 channel is showing
+		if (_deviceView.getRowCount()==1 && _deviceView.getColumnCount()==1){
+			if (_deviceView.getCurrentChannels()==null)return;
+			Channel nowChannel  = _deviceView.getCurrentChannels().get(0);
+			// check which view is having event, Pan , Tilt
+			if (v==btUp)
+				nowChannel.relativePTZ( 0, 1, 0);
+			if (v==btDown)
+				nowChannel.relativePTZ( 0,-1, 0);
+			if (v==btLeft)
+				nowChannel.relativePTZ(-1, 0, 0);
+			if (v==btLeftDown)
+				nowChannel.relativePTZ(-1,-1, 0);
+			if (v==btLeftUp)
+				nowChannel.relativePTZ(-1, 1, 0);
+			if (v==btRight)
+				nowChannel.relativePTZ( 1, 0, 0);
+			if (v==btRightUp)
+				nowChannel.relativePTZ( 1, 1, 0);
+			if (v==btRightDown)
+				nowChannel.relativePTZ( 1,-1, 0);
+			if (v==btMiddle)
+				nowChannel.executeCommand("patrol", "go_home");
+
+			// Zoom
+			if (v==btZoomUp)
+				nowChannel.relativePTZ(0, 0, 1);
+			if (v==btZoomDown)
+				nowChannel.relativePTZ(0, 0, -1);
+
+		}
+	}
+
+
+	@Override
+	public void onPageScrollStateChanged(int arg0) {
+		//	Do nothing , must be implemented
+	}
+	@Override
+	public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels){
+		// when positionOffset==0, refresh current shown ptz
+		if( positionOffset==0.0){
+			this.updateLayout();
+			this._deviceView.updateFrozenStatus();
+		}
+	}
+	@Override
+	public void onPageSelected(int arg0) {
+		// Do nothing , must be implemented
+
+	}
+
+
+	//
+	// ListItem ,UIDeviceListItemView.DeviceListItemCallBack
+	//
+	public void edit(Profile profile) {
+		Context context = listview.getContext();
+		int profileid = _system.indexOfProfile(profile);
+		Intent intent = new Intent();
+		intent.setClass(context, UIConfigurateDeviceActivity.class);
+		intent.putExtra(UIConfigurateDeviceActivity.PARAM_INT_PROFILE_ID,profileid);
+		context.startActivity(intent);
+	}
+	public void delete(Profile profile){
+		// Remove those channel in dummy profile, Not tested
+		Core.getCoreInstance().getProfile(-1).getDevice().getChannels().removeAll(profile.getDevice().getChannels());
+		// Remove the profile from Core
+		_system.getProfiles().remove(profile);
+		Core.save();
+		this.notifyDataSetChanged();
+		this._deviceView.setDevice(this._deviceView.getDevice());
+		if (_deviceView.isSingleChannel())
+			this._deviceView.setChannelPadding(10,10,0,0);
+		else
+			this._deviceView.setChannelPadding(5,5,5,5);
+	}
+	public void view(Profile profile){
+		// NOTE: At phone, after you click a device and go to deviceView,
+		//		you'll be direct to a deviceView with dummy device. Hence you'll
+		//		need to pass the position the first channel will be in the dummy device
+		//		This is done by counting how many channels are before you.(TODO:implement it)
+		// TODO:1. Implement Above
+		//		2. If at tablet, you should send the correct profile and ID to it
+		Context context = listview.getContext();
+		boolean isPhone=false;
+		int profileid = 0 ; 
+		if (isPhone){
+			profileid = _system.indexOfProfile(profile);	// send your really profile ID when at tablet
+		}else{
+			profileid = -1 ;								// -1 means dummy device
+		}
+		int deviceId = 0 ;
+		for(Profile p : Core.getCoreInstance().getProfiles()){
+			if (p == profile)
+				break ;
+			deviceId++;
+		}
+		if (this.isTabPortrait()){
+			this._deviceView.setRowCount(rowCount);
+			this._deviceView.setColumnCount(columnCount);
+		}else{
+			this._deviceView.setRowCount(columnCount);
+			this._deviceView.setColumnCount(rowCount);
+		}
+		this.notifyDataSetChanged();
+		_deviceView.setDevice(profile.getDevice());
+		if (_deviceView.isSingleChannel())
+			this._deviceView.setChannelPadding(10,10,0,0);
+		else
+			this._deviceView.setChannelPadding(5,5,5,5);
+		//		Intent intent = new Intent();
+		//		intent.setClass(context, UIDeviceViewActivity.class);
+		//		intent.putExtra(UIDeviceViewActivity.PARAM_INT_PROFILE_ID,profileid);
+		//		intent.putExtra(UIDeviceViewActivity.PARAM_INT_SELECTED_CHANNEL_INDEX,deviceId);
+		//		context.startActivity(intent);
+	}
+	public void moveUp(Profile profile){
+		List<Profile> profiles = _system.getProfiles();
+		int currentPos = profiles.indexOf(profile);
+		if (currentPos==0) return;
+		Collections.swap(profiles,currentPos,currentPos-1);
+		Core.save();
+		this.notifyDataSetChanged();
+	}
+	public void moveDown(Profile profile){
+		List<Profile> profiles = _system.getProfiles();
+		int currentPos = profiles.indexOf(profile);
+		int profileCount = profiles.size();
+		if(currentPos >= profileCount - 1) return;
+		Collections.swap(profiles,currentPos,currentPos+1);
+		Core.save();
+		this.notifyDataSetChanged();
+	}
+	public void photo(Profile _profile) {
+		new PhotoEmailTask(_profile.getDevice().getChannels(),false,this).execute();
+		Vibrator myVibrator = (Vibrator) getApplication().getSystemService(Service.VIBRATOR_SERVICE);
+		myVibrator.vibrate(500);
+
+	}
+
+	//
+	// implements ListAdapter
+	//
+	private static final int ITEM_VIEW_TYPE_DEFAULT = 0;
+	private static final int ITEM_VIEW_TYPE_EDIT = 1;
+	private int _currentListMode = ITEM_VIEW_TYPE_DEFAULT;
+	private List<DataSetObserver> _dataSetObservers = new ArrayList<DataSetObserver>();
+
+	@Override
+	public int getCount() {
+		return _system.getProfiles().size();
+	}
+	@Override
+	public Object getItem(int position) {
+		return _system.getProfile(position);
+	}
+	@Override
+	public long getItemId(int position) {
+		return position;
+	}
+	@Override
+	public int getItemViewType(int position) {
+		return _currentListMode;
+	}
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		UIDeviceListItemView dliView = (UIDeviceListItemView) convertView;
+		if (dliView == null){
+			dliView = (UIDeviceListItemView) mInflater.inflate(R.layout.device_list_detail, null);
+			dliView.setParent(this);
+		}
+		dliView.setProfile(_system.getProfile(position));
+		switch(_currentListMode) {
+		case ITEM_VIEW_TYPE_DEFAULT:
+			dliView.setEditMode(false);
+			break;
+		case ITEM_VIEW_TYPE_EDIT:
+			dliView.setEditMode(true);
+			break;
+		}
+		return dliView;
+	}
+	@Override
+	public int getViewTypeCount() {
+		return 2;
+	}
+	@Override
+	public boolean hasStableIds() {
+		// TODO Use object reference instead of id.
+		//      But I'm not sure why id is required.
+		//      So I kept this todo as a reminder.
+		return true;
+	}
+	@Override
+	public boolean isEmpty() {
+		return _system.getProfiles().isEmpty();
+	}
+	@Override
+	public void registerDataSetObserver(DataSetObserver observer) {
+		if(!_dataSetObservers.contains(observer))
+			_dataSetObservers.add(observer);
+	}
+	@Override
+	public void unregisterDataSetObserver(DataSetObserver observer) {
+		_dataSetObservers.remove(observer);
+	}
+	@Override
+	public boolean areAllItemsEnabled() {
+		// TODO in case of nvr, when the device info isn't load, the item should be disable.
+		return true;
+	}
+	@Override
+	public boolean isEnabled(int position) {
+		// TODO in case of nvr, when the device info isn't load, the item should be disable.
+		return true;
+	}
+	private void notifyDataSetChanged(){
+		Iterator<DataSetObserver> iterator = _dataSetObservers.iterator();
+		while(iterator.hasNext())
+			iterator.next().onChanged();
+	}
+	
+}

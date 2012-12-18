@@ -1,0 +1,175 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+
+    <com.vuexpro.control.UIDeviceView
+        android:id="@+id/dv_snap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:id="@+id/channel_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/direct_button"
+        android:text="@string/left"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/channel_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/channel_left"
+        android:layout_toRightOf="@+id/channel_left"
+        android:background="@drawable/direct_button"
+        android:contentDescription="Up"
+        android:text="^"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/channel_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/channel_left"
+        android:layout_toRightOf="@+id/channel_left"
+        android:background="@drawable/direct_button"
+        android:text="v"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/channel_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/channel_down"
+        android:layout_toRightOf="@+id/channel_down"
+        android:background="@drawable/direct_button"
+        android:text=">"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/channel_zoom_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/channel_down"
+        android:alpha="0.5"
+        android:background="@drawable/direct_button"
+        android:text="-"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/channel_zoom_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/channel_right"
+        android:layout_alignRight="@+id/dv_snap"
+        android:alpha="0.5"
+        android:background="@drawable/direct_button"
+        android:text="+"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/channel_rightup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/channel_right"
+        android:layout_alignTop="@+id/channel_up"
+        android:background="@drawable/direct_button"
+        android:contentDescription="rightup"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/channel_rightdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/channel_right"
+        android:layout_alignTop="@+id/channel_down"
+        android:background="@drawable/direct_button"
+        android:contentDescription="rightdown"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/channel_leftdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/channel_down"
+        android:layout_toLeftOf="@+id/channel_down"
+        android:background="@drawable/direct_button"
+        android:contentDescription="leftdown"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/channel_leftup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/channel_up"
+        android:layout_toLeftOf="@+id/channel_up"
+        android:background="@drawable/direct_button"
+        android:contentDescription="leftup"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/channel_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/channel_left"
+        android:layout_alignRight="@+id/channel_down"
+        android:layout_below="@+id/channel_up"
+        android:layout_toRightOf="@+id/channel_left"
+        android:background="@drawable/direct_button"
+        android:contentDescription="middle"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/mask_direct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/channel_down"
+        android:layout_alignLeft="@+id/dv_snap"
+        android:layout_alignRight="@+id/channel_right"
+        android:layout_alignTop="@+id/channel_leftup"
+        android:alpha="0.3"
+        android:scaleType="fitXY"
+        android:src="@drawable/keyboard_popup_panel_trans_background"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/mask_zoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/channel_zoom_down"
+        android:layout_alignLeft="@+id/channel_zoom_up"
+        android:layout_alignRight="@+id/dv_snap"
+        android:layout_alignTop="@+id/channel_zoom_up"
+        android:alpha="0.3"
+        android:scaleType="fitXY"
+        android:src="@drawable/keyboard_popup_panel_trans_background"
+        android:visibility="gone" />
+ <ListView
+        android:id="@+id/device_list"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background"
+        android:visibility="gone" >
+    </ListView>
+</RelativeLayout>

@@ -1,0 +1,117 @@
+10
+
+dir
+3
+http://nevin-pc/svn/VuExproTab/trunk/VuExpro/jni
+http://nevin-pc/svn/VuExproTab
+
+
+
+2012-12-10T16:33:10.785853Z
+3
+nevin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3ab1b11e-84f9-fb4a-aea7-c79f65c1c6a2
+
+Android.mk
+file
+
+
+
+
+2012-09-05T08:52:03.356000Z
+eb985208136661d132b1f841b0f9e8ff
+2012-12-10T16:33:10.785853Z
+3
+nevin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+961
+
+DecoderInterface.c
+file
+
+
+
+
+2012-09-17T08:24:32.236000Z
+79c68230a75bcb567b5897a14703f86d
+2012-12-10T16:33:10.785853Z
+3
+nevin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7025
+
+libavcodec
+dir
+
+libavdevice
+dir
+
+libavfilter
+dir
+
+libavformat
+dir
+
+libavutil
+dir
+
+libpostproc
+dir
+
+libswscale
+dir
+

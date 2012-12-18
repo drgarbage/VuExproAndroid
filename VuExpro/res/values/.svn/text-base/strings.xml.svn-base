@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, VuExproActivity!</string>
+    <string name="app_name">VuExpro</string>
+    <string name="menu_save">儲存</string>
+    <string name="menu_add">新增</string>
+    <string name="menu_account">帳號</string>
+    <string name="menu_password">密碼</string>
+    <string name="menu_url">網址</string>
+    <string name="menu_port">通訊埠</string>
+    <string name="msg_input_require">請輸入必填欄位</string>
+    <string name="msg_input_ok">儲存成功</string>
+    <string name="menu_address">地址</string>
+    <string name="menu_user">帳號</string>
+    <string name="menu_name">名稱</string>
+    <string name="msg_update_ok">修改成功</string>
+    <string name="menu_con_type">連線類型</string>
+    <string name="menu_ip_cam">IP Cam</string>
+    <string name="menu_nvr">NVR</string>
+    <string name="msg_delete_ok">刪除成功</string>
+    <string name="change_order_up">上移</string>
+    <string name="change_order_down">下移</string>
+    <string name="del">-</string>
+    <string name="edit">編輯</string>
+    <string name="name">裝置名稱</string>
+    <string name="location">連線種類</string>
+    <string name="welcome">Welcome</string>
+    <string name="welcomeString">welcome!</string>
+    <string name="camera">照相</string>
+    <string name="view">連線</string>
+    <string name="desc_config">連線設定</string>
+    <string name="desc_digital_io">Digital I/O</string>
+    <string name="desc_digital_output">Digital Output</string>
+    <string name="control">Control</string>
+    <string name="prests">Prests</string>
+    <string name="left">&lt;</string>
+    <string name="desc_nearby">附近裝置</string>
+    <string name="hint_passwd">連線時使用的密碼</string>
+    <string name="hint_config_name">請為這個鏡頭命名</string>
+    <string name="hint_host">網址或IP位址</string>
+    <string name="hint_acc">連線時使用的使用者帳號</string>
+
+</resources>

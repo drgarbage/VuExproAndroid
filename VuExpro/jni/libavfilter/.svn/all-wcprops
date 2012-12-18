@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavfilter
+END
+vsink_buffer.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavfilter/vsink_buffer.h
+END
+yadif.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavfilter/yadif.h
+END
+avfilter.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavfilter/avfilter.h
+END
+drawutils.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavfilter/drawutils.h
+END
+internal.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavfilter/internal.h
+END
+avcodec.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavfilter/avcodec.h
+END
+avfiltergraph.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavfilter/avfiltergraph.h
+END
+gradfun.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavfilter/gradfun.h
+END
+vsrc_buffer.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavfilter/vsrc_buffer.h
+END

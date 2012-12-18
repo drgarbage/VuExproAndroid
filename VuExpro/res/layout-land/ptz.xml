@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" 
+    android:paddingBottom="10dp">
+
+    <!-- Listview with or relative view with Dynamic Rows -->
+
+    <TextView
+        android:id="@+id/tv_do"
+        style="@style/TextWithBK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/desc_digital_io"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TableRow
+        android:id="@+id/tableRow_do"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#DDDDDD"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/tv_do2"
+            style="@style/TextWithBK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/desc_digital_output"
+            android:textColor="#000000" />
+
+        <Switch
+            android:id="@+id/switch_do"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp" />
+    </TableRow>
+
+    <TextView
+        android:id="@+id/tv_control"
+        style="@style/TextWithBK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/control"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <GridView
+        android:id="@+id/gridView_ptz"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#DDDDDD"
+        android:gravity="center"
+        android:numColumns="3"
+        android:stretchMode="columnWidth" />
+
+    <TextView
+        android:id="@+id/tv_preset"
+        style="@style/TextWithBK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prests"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <GridView
+        android:id="@+id/gridView_preset"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="#DDDDDD"
+        android:layout_gravity="center"
+        android:numColumns="3"/>
+        
+
+</LinearLayout>

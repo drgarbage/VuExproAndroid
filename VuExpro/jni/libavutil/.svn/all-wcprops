@@ -1,0 +1,299 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil
+END
+avstring.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/avstring.h
+END
+error.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/error.h
+END
+libm.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/libm.h
+END
+fifo.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/fifo.h
+END
+imgutils.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/imgutils.h
+END
+pca.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/pca.h
+END
+pixfmt.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/pixfmt.h
+END
+aes.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/aes.h
+END
+base64.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/base64.h
+END
+des.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/des.h
+END
+crc.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/crc.h
+END
+mem.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/mem.h
+END
+mathematics.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/mathematics.h
+END
+attributes.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/attributes.h
+END
+intfloat_readwrite.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/intfloat_readwrite.h
+END
+eval.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/eval.h
+END
+audioconvert.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/audioconvert.h
+END
+parseutils.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/parseutils.h
+END
+tree.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/tree.h
+END
+x86_cpu.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/x86_cpu.h
+END
+lzo.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/lzo.h
+END
+rc4.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/rc4.h
+END
+samplefmt.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/samplefmt.h
+END
+cpu.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/cpu.h
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/common.h
+END
+sha.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/sha.h
+END
+lfg.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/lfg.h
+END
+random_seed.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/random_seed.h
+END
+rational.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/rational.h
+END
+pixdesc.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/pixdesc.h
+END
+softfloat.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/softfloat.h
+END
+lls.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/lls.h
+END
+opt.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/opt.h
+END
+adler32.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/adler32.h
+END
+bswap.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/bswap.h
+END
+crc_data.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/crc_data.h
+END
+dict.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/dict.h
+END
+avconfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/avconfig.h
+END
+avutil.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/avutil.h
+END
+intmath.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/intmath.h
+END
+intreadwrite.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/intreadwrite.h
+END
+avassert.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/avassert.h
+END
+file.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/file.h
+END
+internal.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/internal.h
+END
+integer.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/integer.h
+END
+md5.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/md5.h
+END
+colorspace.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/colorspace.h
+END
+log.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/log.h
+END
+timer.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavutil/timer.h
+END

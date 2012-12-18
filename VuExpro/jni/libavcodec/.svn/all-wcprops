@@ -1,0 +1,1433 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec
+END
+aacps.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/aacps.h
+END
+fmtconvert.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/fmtconvert.h
+END
+mpeg12decdata.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpeg12decdata.h
+END
+h264.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/h264.h
+END
+rangecoder.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/rangecoder.h
+END
+aac_ac3_parser.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/aac_ac3_parser.h
+END
+dv_vlc_data.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dv_vlc_data.h
+END
+aacsbrdata.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/aacsbrdata.h
+END
+rv30data.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/rv30data.h
+END
+eac3enc.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/eac3enc.h
+END
+dv_tablegen.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dv_tablegen.h
+END
+kbdwin.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/kbdwin.h
+END
+rv34data.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/rv34data.h
+END
+mpeg12data.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpeg12data.h
+END
+ac3.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/ac3.h
+END
+dxva2.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dxva2.h
+END
+xvmc.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/xvmc.h
+END
+mjpeg.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mjpeg.h
+END
+ac3dec_data.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/ac3dec_data.h
+END
+synth_filter.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/synth_filter.h
+END
+vp56.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vp56.h
+END
+dctref.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dctref.h
+END
+intrax8.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/intrax8.h
+END
+motionpixels_tablegen.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/motionpixels_tablegen.h
+END
+mpc.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpc.h
+END
+h264_mvpred.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/h264_mvpred.h
+END
+vp3data.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vp3data.h
+END
+vc1.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vc1.h
+END
+j2k_dwt.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/j2k_dwt.h
+END
+mjpegenc.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mjpegenc.h
+END
+vdpau_internal.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vdpau_internal.h
+END
+mpeg4audio.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpeg4audio.h
+END
+raw.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/raw.h
+END
+msmpeg4.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/msmpeg4.h
+END
+qdm2_tablegen.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/qdm2_tablegen.h
+END
+mathops.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mathops.h
+END
+rtjpeg.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/rtjpeg.h
+END
+cga_data.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/cga_data.h
+END
+elbg.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/elbg.h
+END
+wmaprodata.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/wmaprodata.h
+END
+mlp_parser.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mlp_parser.h
+END
+vaapi_internal.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vaapi_internal.h
+END
+ivi_common.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/ivi_common.h
+END
+jpegls.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/jpegls.h
+END
+mpegaudio.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpegaudio.h
+END
+h264data.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/h264data.h
+END
+indeo3data.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/indeo3data.h
+END
+mpegvideo_common.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpegvideo_common.h
+END
+wmadata.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/wmadata.h
+END
+fft-internal.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/fft-internal.h
+END
+mpeg4data.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpeg4data.h
+END
+dvdata.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dvdata.h
+END
+ratecontrol.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/ratecontrol.h
+END
+mpegaudiodecheader.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpegaudiodecheader.h
+END
+vp8.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vp8.h
+END
+golomb.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/golomb.h
+END
+ass.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/ass.h
+END
+qcelpdata.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/qcelpdata.h
+END
+dca.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dca.h
+END
+mpc8data.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpc8data.h
+END
+acelp_filters.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/acelp_filters.h
+END
+sbr.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/sbr.h
+END
+bmp.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/bmp.h
+END
+libdirac_libschro.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/libdirac_libschro.h
+END
+amr.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/amr.h
+END
+twinvq_data.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/twinvq_data.h
+END
+h263.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/h263.h
+END
+mpcdata.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpcdata.h
+END
+aac_tablegen_decl.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/aac_tablegen_decl.h
+END
+mjpegdec.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mjpegdec.h
+END
+vc1data.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vc1data.h
+END
+a64colors.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/a64colors.h
+END
+sinewin_tablegen.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/sinewin_tablegen.h
+END
+wmv2.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/wmv2.h
+END
+psymodel.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/psymodel.h
+END
+dnxhddata.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dnxhddata.h
+END
+sgi.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/sgi.h
+END
+truemotion1data.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/truemotion1data.h
+END
+truespeech_data.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/truespeech_data.h
+END
+vorbis_enc_data.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vorbis_enc_data.h
+END
+ivi_dsp.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/ivi_dsp.h
+END
+parser.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/parser.h
+END
+cbrt_tablegen.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/cbrt_tablegen.h
+END
+ra144.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/ra144.h
+END
+ra288.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/ra288.h
+END
+mpc8huff.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpc8huff.h
+END
+rv34.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/rv34.h
+END
+cabac.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/cabac.h
+END
+roqvideo.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/roqvideo.h
+END
+svq1enc_cb.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/svq1enc_cb.h
+END
+flac.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/flac.h
+END
+vp8data.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vp8data.h
+END
+dxva2_internal.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dxva2_internal.h
+END
+lzw.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/lzw.h
+END
+xiph.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/xiph.h
+END
+dcadata.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dcadata.h
+END
+faandct.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/faandct.h
+END
+huffman.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/huffman.h
+END
+binkdata.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/binkdata.h
+END
+h261data.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/h261data.h
+END
+pnm.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/pnm.h
+END
+sinewin.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/sinewin.h
+END
+unary.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/unary.h
+END
+flv.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/flv.h
+END
+mlp.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mlp.h
+END
+svq1_vlc.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/svq1_vlc.h
+END
+cookdata.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/cookdata.h
+END
+adx.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/adx.h
+END
+h264dsp.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/h264dsp.h
+END
+atrac1data.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/atrac1data.h
+END
+amrwbdata.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/amrwbdata.h
+END
+internal.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/internal.h
+END
+mqc.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mqc.h
+END
+targa.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/targa.h
+END
+rdft.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/rdft.h
+END
+aac.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/aac.h
+END
+dsputil.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dsputil.h
+END
+vp8dsp.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vp8dsp.h
+END
+mpegaudiotab.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpegaudiotab.h
+END
+cavsdata.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/cavsdata.h
+END
+vp56dsp.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vp56dsp.h
+END
+bytestream.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/bytestream.h
+END
+xvmc_internal.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/xvmc_internal.h
+END
+lsp.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/lsp.h
+END
+libdirac.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/libdirac.h
+END
+thread.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/thread.h
+END
+wma.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/wma.h
+END
+mpeg4video.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpeg4video.h
+END
+ac3_parser.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/ac3_parser.h
+END
+dcahuff.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dcahuff.h
+END
+get_bits.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/get_bits.h
+END
+imgconvert.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/imgconvert.h
+END
+flacdata.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/flacdata.h
+END
+dct.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dct.h
+END
+lcl.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/lcl.h
+END
+mpegvideo.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpegvideo.h
+END
+h263_parser.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/h263_parser.h
+END
+acelp_vectors.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/acelp_vectors.h
+END
+aacps_tablegen.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/aacps_tablegen.h
+END
+msrledec.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/msrledec.h
+END
+avfft.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/avfft.h
+END
+lpc.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/lpc.h
+END
+celp_filters.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/celp_filters.h
+END
+wmavoice_data.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/wmavoice_data.h
+END
+j2k.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/j2k.h
+END
+ac3tab.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/ac3tab.h
+END
+amrnbdata.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/amrnbdata.h
+END
+vp5data.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vp5data.h
+END
+rv34vlc.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/rv34vlc.h
+END
+ac3enc.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/ac3enc.h
+END
+imcdata.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/imcdata.h
+END
+rle.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/rle.h
+END
+dirac.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dirac.h
+END
+rectangle.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/rectangle.h
+END
+mpegaudiodsp.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpegaudiodsp.h
+END
+mpeg4video_parser.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpeg4video_parser.h
+END
+ulti_cb.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/ulti_cb.h
+END
+fft.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/fft.h
+END
+high_bit_depth.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/high_bit_depth.h
+END
+tiff.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/tiff.h
+END
+indeo5data.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/indeo5data.h
+END
+put_bits.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/put_bits.h
+END
+vdpau.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vdpau.h
+END
+sipr16kdata.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/sipr16kdata.h
+END
+rl.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/rl.h
+END
+aac_tablegen.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/aac_tablegen.h
+END
+libxvid_internal.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/libxvid_internal.h
+END
+atrac.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/atrac.h
+END
+avcodec.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/avcodec.h
+END
+snow.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/snow.h
+END
+svq1.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/svq1.h
+END
+h261.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/h261.h
+END
+vp56data.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vp56data.h
+END
+cavsdsp.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/cavsdsp.h
+END
+faxcompr.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/faxcompr.h
+END
+msgsmdec.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/msgsmdec.h
+END
+pcm_tablegen.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/pcm_tablegen.h
+END
+gsmdec_data.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/gsmdec_data.h
+END
+iirfilter.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/iirfilter.h
+END
+acelp_pitch_delay.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/acelp_pitch_delay.h
+END
+s3tc.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/s3tc.h
+END
+vaapi.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vaapi.h
+END
+ac3dsp.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/ac3dsp.h
+END
+mpegaudio_tablegen.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpegaudio_tablegen.h
+END
+ac3dec.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/ac3dec.h
+END
+eac3dec_data.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/eac3dec_data.h
+END
+msmpeg4data.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/msmpeg4data.h
+END
+vorbis.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vorbis.h
+END
+aacdectab.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/aacdectab.h
+END
+dcaenc.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dcaenc.h
+END
+sipr.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/sipr.h
+END
+version.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/version.h
+END
+lagarithrac.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/lagarithrac.h
+END
+a64enc.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/a64enc.h
+END
+bgmc.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/bgmc.h
+END
+cavs.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/cavs.h
+END
+intrax8huf.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/intrax8huf.h
+END
+mpegaudiodata.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpegaudiodata.h
+END
+svq1_cb.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/svq1_cb.h
+END
+ass_split.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/ass_split.h
+END
+nellymoser.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/nellymoser.h
+END
+audioconvert.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/audioconvert.h
+END
+vc1dsp.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vc1dsp.h
+END
+tableprint.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/tableprint.h
+END
+aacsbr.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/aacsbr.h
+END
+libschroedinger.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/libschroedinger.h
+END
+g729data.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/g729data.h
+END
+qdm2data.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/qdm2data.h
+END
+rv40vlc2.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/rv40vlc2.h
+END
+mpeg12.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpeg12.h
+END
+vp6data.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vp6data.h
+END
+h264pred.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/h264pred.h
+END
+png.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/png.h
+END
+rv40data.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/rv40data.h
+END
+aandcttab.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/aandcttab.h
+END
+dnxhdenc.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dnxhdenc.h
+END
+vc1acdata.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/vc1acdata.h
+END
+h263data.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/h263data.h
+END
+aactab.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/aactab.h
+END
+aacpsy.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/aacpsy.h
+END
+indeo2data.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/indeo2data.h
+END
+jpeglsdec.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/jpeglsdec.h
+END
+opt.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/opt.h
+END
+dct32.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dct32.h
+END
+faanidct.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/faanidct.h
+END
+aacenc.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/aacenc.h
+END
+simple_idct.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/simple_idct.h
+END
+bethsoftvideo.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/bethsoftvideo.h
+END
+atrac3data.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/atrac3data.h
+END
+aacadtsdec.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/aacadtsdec.h
+END
+dcadsp.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dcadsp.h
+END
+sp5x.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/sp5x.h
+END
+celp_math.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/celp_math.h
+END
+dwt.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/dwt.h
+END
+mpc7data.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpc7data.h
+END
+siprdata.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/siprdata.h
+END
+a64tables.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/a64tables.h
+END
+mpegaudiodectab.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/jni/libavcodec/mpegaudiodectab.h
+END

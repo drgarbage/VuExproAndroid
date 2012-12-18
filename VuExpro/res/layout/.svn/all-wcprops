@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/res/layout
+END
+device_list.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/res/layout/device_list.xml
+END
+device_list_detail.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/res/layout/device_list_detail.xml
+END
+device_config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/res/layout/device_config.xml
+END
+single_channel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/res/layout/single_channel.xml
+END
+device_view.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/res/layout/device_view.xml
+END
+channel_view_detail.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/res/layout/channel_view_detail.xml
+END
+channel_view.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/res/layout/channel_view.xml
+END
+welcome.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/res/layout/welcome.xml
+END
+device_view_fake.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/res/layout/device_view_fake.xml
+END
+ptz.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/VuExproTab/!svn/ver/3/trunk/VuExpro/res/layout/ptz.xml
+END
